@@ -1,8 +1,11 @@
 import express from 'express';
 import { ApolloServer, gql } from 'apollo-server-express';
 import 'dotenv/config';
+import cors from 'cors';
 
 const app = express();
+
+app.use(cors());
 
 const schema = gql`
     type Query {
